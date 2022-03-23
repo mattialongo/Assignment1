@@ -48,7 +48,7 @@ int main(void)
 		printf("FIFO initialized\n");
 	}
 	
-	do{
+	while(1){
 		printf("insert a key (1=insert, 2=remove, 3=peep, 4=size, anything else = exit): ");
 		scanf("%d",&key);
 	
@@ -89,7 +89,10 @@ int main(void)
 			/*Return the size of FIFO */
 			printf("The size of FIFO is: %d\n", MyFIFOSize());
 		}
-	}while(key==1||key==2||key==3||key==4);
+		else{
+			return 0;
+		}
+	}
 	
 	/* And finish */
 	return 0;
