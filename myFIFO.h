@@ -1,6 +1,6 @@
 
 /** @file myFIFO.h
- * @brief myFIFO.h contains the functions prototype of a FIFO
+ * @brief contains the most meaningful functions of a FIFO
  *
  * The functions are:
  * MyFIFOInit inizialize the FIFO and it fix all the elements to 0

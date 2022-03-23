@@ -1,0 +1,50 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+contains the main fuction of the assignment1 -\/ P1  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}my\+FIFO.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em main functions verify the rightness of my\+FIFO functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the main fuction of the assignment1 -\/ P1 
+
+The goal of this code is to verify the correct behaviour of the module \mbox{\hyperlink{myFIFO_8c}{my\+FIFO.\+c}} which contains some basic fuctions for a FIFO data structure. In particular, this file contains the \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main()}} function
+
+\begin{DoxyAuthor}{Author}
+Mattia Longo and Giacomo Bego 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 March 2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]No known bugs \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+main functions verify the rightness of my\+FIFO functions 
+
+main function has the goal to use all the function described in \mbox{\hyperlink{myFIFO_8c}{my\+FIFO.\+c}} file those can be chosen by the standard input A visible feedback by the printf command is used.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main()}} always return 0 
+\end{DoxyReturn}

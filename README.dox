@@ -1,0 +1,14 @@
+/**
+
+@mainpage FIFO_Assignment_1 Documentation
+
+@author Giacomo Bego, Mattia Longo
+
+The assignment is to implement a FIFO defining the most 
+meaningful functions and to test them.
+The correctness of the projects has been verified by using the standard input
+and the frontal monitor.
+No bugs has been detected.
+
+*/
+

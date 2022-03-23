@@ -1,5 +1,5 @@
 /** @file main.c
- * @brief main.c This is the main fuction of the assignment1 - P1
+ * @brief contains the main fuction of the assignment1 - P1
  *
  * The goal of this code is to verify the correct behaviour
  * of the module myFIFO.c which contains some basic fuctions
@@ -8,7 +8,7 @@
  * 
  * @author Mattia Longo and Giacomo Bego
  * @date 22 March 2022
- * @bug No known bugs.
+ * @bug No known bugs
  */
 
 
@@ -34,7 +34,7 @@ int main(void)
 	/* Variable declaration and init */
 	int vect_size; 	
 	int element;
-	int key;
+	char key;
 	
 	/*FIFO initialization*/  	
 	printf("Digit the FIFO maximum size: ");
@@ -49,10 +49,9 @@ int main(void)
 	}
 	
 	while(1){
-		printf("insert a key (1=insert, 2=remove, 3=peep, 4=size, anything else = exit): ");
-		scanf("%d",&key);
-	
-		if(key==1){
+		printf("insert a key (i=insert, r=remove, p=peep, s=size, anything else= exit): ");
+		scanf(" %c",&key);
+		if(key=='i'){
 	
 			/*Insert elements in FIFO */
 			printf("Digit the element to insert in FIFO: ");
@@ -62,11 +61,11 @@ int main(void)
 				printf("The FIFO is full. Delete some element if you want insert them\n");
 			}
 			else{
-				printf("Element inserted in FIfO\n");
+				printf("Element inserted in FIFO\n");
 			}
 			
 		}
-		else if(key==2){
+		else if(key=='r'){
 		
 			/*Delete one elements */
 			if(MyFIFORemove()==-1){
@@ -76,7 +75,7 @@ int main(void)
 				printf("One element removed\n");
 			}
 		}
-		else if(key==3){
+		else if(key=='p'){
 			/*Show the oldest element*/
 			if(MyFIFOPeep()==NULL){
 				printf("There isn't any element to show\n");
@@ -85,7 +84,7 @@ int main(void)
 				printf("The oldest element is: %d\n",MyFIFOPeep());
 			}
 		}
-		else if(key==4){
+		else if(key=='s'){
 			/*Return the size of FIFO */
 			printf("The size of FIFO is: %d\n", MyFIFOSize());
 		}

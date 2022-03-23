@@ -1,0 +1,104 @@
+\hypertarget{myFIFO_8c}{}\doxysection{my\+FIFO.\+c File Reference}
+\label{myFIFO_8c}\index{myFIFO.c@{myFIFO.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for my\+FIFO.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{myFIFO_8c_a1b8aacdbc5fc3ff79133c2a590a89b75}{My\+FIFOInit}} (int max\+\_\+size)
+\begin{DoxyCompactList}\small\item\em My\+FIFOInit inizialize the FIFO. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{myFIFO_8c_ad15e88217bcc79d41629de4eb76c3f18}{My\+FIFOInsert}} (int value)
+\begin{DoxyCompactList}\small\item\em My\+FIFOInsert add a specific integer value in the FIFO, passed as parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{myFIFO_8c_a508cab370543672c94ac2424d3bcb8f2}{My\+FIFORemove}} ()
+\begin{DoxyCompactList}\small\item\em My\+FIFORemove wants remove the oldest element in the FIFO. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{myFIFO_8c_adf0ace73eb2efbf6689f1890ce601d85}{My\+FIFOPeep}} ()
+\begin{DoxyCompactList}\small\item\em My\+FIFOPeep return the oldest element of the FIFO. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{myFIFO_8c_ac2dc126ff63e88f742680a526d34dbcc}{My\+FIFOSize}} ()
+\begin{DoxyCompactList}\small\item\em My\+FIFOSize return the size of the FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{myFIFO_8c_a1b8aacdbc5fc3ff79133c2a590a89b75}\label{myFIFO_8c_a1b8aacdbc5fc3ff79133c2a590a89b75}} 
+\index{myFIFO.c@{myFIFO.c}!MyFIFOInit@{MyFIFOInit}}
+\index{MyFIFOInit@{MyFIFOInit}!myFIFO.c@{myFIFO.c}}
+\doxysubsubsection{\texorpdfstring{MyFIFOInit()}{MyFIFOInit()}}
+{\footnotesize\ttfamily int My\+FIFOInit (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+My\+FIFOInit inizialize the FIFO. 
+
+My\+FIFOInit inizialize the FIFO and it fix all the elements to 0 
+\begin{DoxyParams}{Parameters}
+{\em is} & the maximum number of element that the FIFO can contain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if the size of the parameter is invalid (max\+\_\+size $<$=0), otherwise 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{myFIFO_8c_ad15e88217bcc79d41629de4eb76c3f18}\label{myFIFO_8c_ad15e88217bcc79d41629de4eb76c3f18}} 
+\index{myFIFO.c@{myFIFO.c}!MyFIFOInsert@{MyFIFOInsert}}
+\index{MyFIFOInsert@{MyFIFOInsert}!myFIFO.c@{myFIFO.c}}
+\doxysubsubsection{\texorpdfstring{MyFIFOInsert()}{MyFIFOInsert()}}
+{\footnotesize\ttfamily int My\+FIFOInsert (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+My\+FIFOInsert add a specific integer value in the FIFO, passed as parameter. 
+
+My\+FIFOInsert wants to add an integer value to a FIFO of a integers Anyway My\+FIFOInsert has the goal to verify first of all if the FIFO is full, in that case it does not proceed to insert the element
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & integer value candidated to be added as an element to the FIFO\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if the FIFO is full, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{myFIFO_8c_adf0ace73eb2efbf6689f1890ce601d85}\label{myFIFO_8c_adf0ace73eb2efbf6689f1890ce601d85}} 
+\index{myFIFO.c@{myFIFO.c}!MyFIFOPeep@{MyFIFOPeep}}
+\index{MyFIFOPeep@{MyFIFOPeep}!myFIFO.c@{myFIFO.c}}
+\doxysubsubsection{\texorpdfstring{MyFIFOPeep()}{MyFIFOPeep()}}
+{\footnotesize\ttfamily int My\+FIFOPeep (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+My\+FIFOPeep return the oldest element of the FIFO. 
+
+If the FIFO is empty it does not proceed and an error value is returned If the FIFO is not empty it proceed to return the oldest element in the FIFO, without remove any element
+
+\begin{DoxyReturn}{Returns}
+NULL if the FIFO is empty, otherwise it returns the oldest value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{myFIFO_8c_a508cab370543672c94ac2424d3bcb8f2}\label{myFIFO_8c_a508cab370543672c94ac2424d3bcb8f2}} 
+\index{myFIFO.c@{myFIFO.c}!MyFIFORemove@{MyFIFORemove}}
+\index{MyFIFORemove@{MyFIFORemove}!myFIFO.c@{myFIFO.c}}
+\doxysubsubsection{\texorpdfstring{MyFIFORemove()}{MyFIFORemove()}}
+{\footnotesize\ttfamily int My\+FIFORemove (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+My\+FIFORemove wants remove the oldest element in the FIFO. 
+
+If the FIFO is empty it does not proceed and an error value is returned If the FIFO is not empty it proceed to remove the oldest element in the FIFO
+
+\begin{DoxyReturn}{Returns}
+-\/1 if the FIFO is empty, otherwise 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{myFIFO_8c_ac2dc126ff63e88f742680a526d34dbcc}\label{myFIFO_8c_ac2dc126ff63e88f742680a526d34dbcc}} 
+\index{myFIFO.c@{myFIFO.c}!MyFIFOSize@{MyFIFOSize}}
+\index{MyFIFOSize@{MyFIFOSize}!myFIFO.c@{myFIFO.c}}
+\doxysubsubsection{\texorpdfstring{MyFIFOSize()}{MyFIFOSize()}}
+{\footnotesize\ttfamily int My\+FIFOSize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+My\+FIFOSize return the size of the FIFO. 
+
+My\+FIFOSize has the unique goal to return the number of the elements in the FIFO
+
+\begin{DoxyReturn}{Returns}
+the number of elements in the FIFO in this moment 
+\end{DoxyReturn}
