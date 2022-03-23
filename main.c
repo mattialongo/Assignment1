@@ -1,3 +1,16 @@
+/** @file main.c
+ * @brief main.c This is the main fuction of the assignment1 - P1
+ *
+ * The goal of this code is to verify the correct behaviour
+ * of the module myFIFO.c which contains some basic fuctions
+ * for a FIFO data structure. 
+ * In particular, this file contains the main() function
+ * 
+ * @author Mattia Longo and Giacomo Bego
+ * @date 22 March 2022
+ * @bug No known bugs.
+ */
+
 
 /* Includes */
 #include <stdio.h>
@@ -6,100 +19,78 @@
 
 
 /**
- * @brief Brief decription of main().
+ * @brief main functions verify the rightness of myFIFO functions
  *
- * Here it goes the long description of main()
- * main has no input arguments.
- * It declares two variables and calls function1() using them 
- * as argument. 
- * It then prints the result and returns.
+ * main function has the goal to use all the function
+ * described in myFIFO.c file those can be chosen by the standard input
+ * A visible feedback by the printf command is used.
  * 
- * @return main() always returns 0
+ * @return main() always return 0
  */
  
-
  
 int main(void)
 {
 	/* Variable declaration and init */
 	int vect_size; 	
 	int element;
+	int key;
 	
 	/*FIFO initialization*/  	
-	printf("Write FIFO maximum size: ");
+	printf("Digit the FIFO maximum size: ");
 	scanf("%d",&vect_size);
 	
 	if(MyFIFOInit(vect_size)==-1){
-		printf("The size of FIFO must be positive\n");
+		printf("The size of FIFO must be positive!! \n");
 		return 0;
 	}
 	else{
 		printf("FIFO initialized\n");
 	}
 	
+	do{
+		printf("insert a key (1=insert, 2=remove, 3=peep, 4=size, anything else = exit): ");
+		scanf("%d",&key);
 	
+		if(key==1){
 	
-	/*Insert elements in FIFO */
-	printf("Write the first element to insert in FIFO: ");
-	scanf("%d",&element);
+			/*Insert elements in FIFO */
+			printf("Digit the element to insert in FIFO: ");
+			scanf("%d",&element);
 	
-	if(MyFIFOInsert(element)==-1){
-		printf("The FIFO is full. Delete some element if you want insert them\n");
-	}
-	else{
-		printf("Element inserted in FIFO\n");
-	}
-	
-	printf("Write the second element to insert in FIFO: ");
-	scanf("%d",&element);
-	
-	if(MyFIFOInsert(element)==-1){
-		printf("The FIFO is full. Delete some element if you want insert them\n");
-	}
-	else{
-		printf("Element inserted in FIFO\n");
-	}
-	
-	printf("Write the third element to insert in FIFO: ");
-	scanf("%d",&element);
-	
-	if(MyFIFOInsert(element)==-1){
-		printf("The FIFO is full. Delete some element if you want insert them\n");
-	}
-	else{
-		printf("Element inserted in FIFO\n");
-	}
-	
-	
-	
-	/*Return the size of FIFO */
-	printf("The size of FIFO is: %d\n", MyFIFOSize());
-	
+			if(MyFIFOInsert(element)==-1){
+				printf("The FIFO is full. Delete some element if you want insert them\n");
+			}
+			else{
+				printf("Element inserted in FIfO\n");
+			}
+			
+		}
+		else if(key==2){
 		
-	
-	/*Delete one elements */
-	printf("Delete one element\n");
-	
-	if(MyFIFORemove()==-1){
-		printf("The FIFO is empty. Nothing to remove\n");
-	}
-	else{
-		printf("One element removed\n");
-	}
-	
-	
-	
-	/*Show the oldest element*/
-	if(MyFIFOPeep()==NULL){
-		printf("There isn't any element to show\n");
-	}
-	else{
-		printf("The oldest element is: %d\n",MyFIFOPeep());
-	}
-	
-	
-	
+			/*Delete one elements */
+			if(MyFIFORemove()==-1){
+				printf("The FIFO is empty. Nothing to remove\n");
+			}
+			else{
+				printf("One element removed\n");
+			}
+		}
+		else if(key==3){
+			/*Show the oldest element*/
+			if(MyFIFOPeep()==NULL){
+				printf("There isn't any element to show\n");
+			}
+			else{
+				printf("The oldest element is: %d\n",MyFIFOPeep());
+			}
+		}
+		else if(key==4){
+			/*Return the size of FIFO */
+			printf("The size of FIFO is: %d\n", MyFIFOSize());
+		}
+	}while(key==1||key==2||key==3||key==4);
 	
 	/* And finish */
 	return 0;
-}
+	}
