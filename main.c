@@ -31,6 +31,7 @@ int main(void)
 	
 	if(MyFIFOInit(vect_size)==-1){
 		printf("The size of FIFO must be positive\n");
+		return 0;
 	}
 	else{
 		printf("FIFO initialized\n");
@@ -72,7 +73,7 @@ int main(void)
 	
 	
 	/*Return the size of FIFO */
-	printf("The size of FIFO is: %d\n", MyFIFOSize())
+	printf("The size of FIFO is: %d\n", MyFIFOSize());
 	
 		
 	
@@ -93,7 +94,7 @@ int main(void)
 		printf("There isn't any element to show\n");
 	}
 	else{
-		printf("The oldest element is: %d",MyFIFOPeep());
+		printf("The oldest element is: %d\n",MyFIFOPeep());
 	}
 	
 	
