@@ -75,7 +75,6 @@ int MyFIFOPeep()
 	else{
 		return vect[index];
 	}
-
 }
 
 
